@@ -1,0 +1,5 @@
+from selenium import webdriver
+from selenium.webdriver.firefox.service import Service as FFService
+ffservice=FFService(executable_path="C:\\Users\\Amruth gowda\\Desktop\\Udemy\\Selenium\\SeleniumProject\\drivers\\geckodriver.exe")
+drivers=webdriver.Firefox(service=ffservice)
+drivers.get("https://www.w3schools.com/python/ ")
