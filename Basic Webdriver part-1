@@ -1,1 +1,10 @@
-Entering different browser using selenium webdriver
+#Entering Edge browser using selenium webdriver
+from selenium import webdriver
+from selenium.webdriver.edge.service import Service as EService
+class RunEDGETest:
+    def test(self):
+        eservice = EService(executable_path="C:\\Users\\Amruth gowda\\Desktop\\Udemy\\Selenium\\SeleniumProject\\drivers\\msedgedriver.exe")
+        drivers = webdriver.Edge(service=eservice)
+        drivers.get("https://www.w3schools.com/")
+ff=RunEDGETest()
+ff.test()
