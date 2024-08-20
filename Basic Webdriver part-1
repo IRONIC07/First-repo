@@ -8,3 +8,23 @@ class RunEDGETest:
         drivers.get("https://www.w3schools.com/")
 ff=RunEDGETest()
 ff.test()
+#Entering chrome browser using selenium webdriver
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as CService
+class RunchromeTest:
+    def test(self):
+        chromrservice = CService(executable_path="C:\\Users\\Amruth gowda\\Desktop\\Udemy\\Selenium\\SeleniumProject\\drivers\\chromedriver.exe")
+        drivers = webdriver.Chrome(service=chromrservice)
+        drivers.get("https://www.w3schools.com/")
+ff=RunchromeTest()
+ff.test()
+#Entering Firefox browser using selenium webdriver
+from selenium import webdriver
+from selenium.webdriver.firefox.service import Service as FFService
+class RunFFTest:
+    def test(self):
+        ffservice = FFService(executable_path="C:\\Users\\Amruth gowda\\Desktop\\Udemy\\Selenium\\SeleniumProject\\drivers\\geckodriver.exe")
+        drivers = webdriver.Firefox(service=ffservice)
+        drivers.get("https://www.w3schools.com/")
+ff=RunFFTest()
+ff.test()
